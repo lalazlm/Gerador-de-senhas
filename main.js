@@ -40,16 +40,16 @@ geraSenha();
 
 function geraSenha(){
     let alfabeto = '';
-    if (checkbok[0].checked){
+    if (checkbox[0].checked){
         alfabeto = alfabeto + letrasMaisculas;
     }
-    if (checkbok[1].checked){
+    if (checkbox[1].checked){
         alfabeto = alfabeto + letrasMinusculas;
     }
-    if (checkbok[2].checked){
+    if (checkbox[2].checked){
         alfabeto = alfabeto + numeros;
     }
-    if (checkbok[3].checked){
+    if (checkbox[3].checked){
         alfabeto = alfabeto + simbolos;
     }
 
@@ -68,7 +68,7 @@ function classficaSenha(tamanhoSenha){
     forcaSenha.classList.remove('fraca','media','forte');
     if(entropia > 57){
         forcaSenha.classList.add('forte');
-    } else if (entropia > 35 && entropia < 57 ) {
+    } else if (entropia > 35 && entropia <= 57 ) {
         forcaSenha.classList.add('media');
     } else if (entropia <= 35){
         forcaSenha.classList.add('fraca');
